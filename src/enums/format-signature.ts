@@ -1,0 +1,4 @@
+export enum FormatSignature {
+	ENHMETA_SIGNATURE = 0x464D4520,
+	EPS_SIGNATURE = 0x46535045
+}
