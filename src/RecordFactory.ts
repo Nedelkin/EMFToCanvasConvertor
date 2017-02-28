@@ -8,7 +8,8 @@ let records = {
 	[RecordType.EMR_HEADER]: Header,
 	[RecordType.EMR_SETMAPMODE]: SetMapMode,
 	[RecordType.EMR_MODIFYWORLDTRANSFORM]: ModifyWorldTranform,
-	[RecordType.EMR_COMMENT]: Comment
+	[RecordType.EMR_COMMENT]: Comment,
+	[RecordType.EMR_SETBKMODE]: SetMapMode
 };
 
 export class RecordFactory {
