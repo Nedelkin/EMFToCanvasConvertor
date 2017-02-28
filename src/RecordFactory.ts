@@ -3,13 +3,15 @@ import {Header} from "./reсords/Header";
 import {SetMapMode} from "./reсords/SetMapMode";
 import {ModifyWorldTranform} from "./reсords/ModifyWorldTranform";
 import {Comment} from "./reсords/Comment";
+import {SetPolyfillMode} from "./reсords/SetPolyfillMode";
 
 let records = {
 	[RecordType.EMR_HEADER]: Header,
 	[RecordType.EMR_SETMAPMODE]: SetMapMode,
 	[RecordType.EMR_MODIFYWORLDTRANSFORM]: ModifyWorldTranform,
 	[RecordType.EMR_COMMENT]: Comment,
-	[RecordType.EMR_SETBKMODE]: SetMapMode
+	[RecordType.EMR_SETBKMODE]: SetMapMode,
+	[RecordType.EMR_SETPOLYFILLMODE]: SetPolyfillMode,
 };
 
 export class RecordFactory {
