@@ -2,7 +2,7 @@ import {RecordType} from "./enums/record-type";
 import {Header} from "./reсords/Header";
 import {SetMapMode} from "./reсords/SetMapMode";
 import {ModifyWorldTranform} from "./reсords/ModifyWorldTranform";
-import {Comment} from "./reсords/Comment";
+import {Comment} from "./reсords/Comment/Comment";
 import {SetPolyfillMode} from "./reсords/SetPolyfillMode";
 
 let records = {
