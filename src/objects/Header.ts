@@ -1,0 +1,15 @@
+export const Header = {
+	Bounds: 128,
+	Frame: 128,
+	RecordSignature: 32,
+	Version: 32,
+	Bytes: 32,
+	Records: 32,
+	Handles: 16,
+	Reserved: 16,
+	nDescription: 32,
+	offDescription: 32,
+	nPalEntries: 32,
+	Device: 64,
+	Millimeters: 64,
+};
