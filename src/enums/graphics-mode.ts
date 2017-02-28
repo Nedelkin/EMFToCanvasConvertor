@@ -1,0 +1,4 @@
+export enum GraphicsMode {
+	GM_COMPATIBLE = 0x00000001,
+	GM_ADVANCED = 0x00000002
+}
