@@ -1,9 +1,9 @@
 import {RecordType} from "./enums/record-type";
 import {Header} from "./reсords/Header";
-import {SetMapMode} from "./reсords/SetMapMode";
+import {SetMapMode} from "./reсords/State/SetMapMode";
 import {ModifyWorldTranform} from "./reсords/ModifyWorldTranform";
 import {Comment} from "./reсords/Comment/Comment";
-import {SetPolyfillMode} from "./reсords/SetPolyfillMode";
+import {SetPolyfillMode} from "./reсords/State/SetPolyfillMode";
 
 let records = {
 	[RecordType.EMR_HEADER]: Header,
