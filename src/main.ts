@@ -12,7 +12,8 @@ file.onchange = function (e:any) {
 	reader.onload = function (e:any) {
 		let buffer = e.target.result;
 		let data = new DataView(buffer);
-		new Parser(data).parseRecords();
+		let parser = new Parser(data);
+		parser.parseRecords();
 	}
 };
 

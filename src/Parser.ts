@@ -10,15 +10,17 @@ export class Parser {
 			let type = this.data.getUint32(this.offset, true);
 			let size = this.data.getUint32(this.offset + this.size_record_offset, true);
 
-			RecordFactory.getInstance().createRecord(type);
+			this.records.push(RecordFactory.getInstance().createRecord(type));
 
-
-			this.offset += size;
 			if (RecordType.EMR_EOF === type) {
 				break;
 			}
+
+			this.offset += size;
 		}
 	}
+
+	private records:any[] = [];
 
 	private offset = 0;
 	private size_record_offset = 4;
