@@ -18,13 +18,14 @@ import {DeleteObject} from "./reсords/ObjectManipulation/DeleteObject";
 import {LineTo} from "./reсords/Drawing/LineTo";
 import {EOF} from "./reсords/Control/EOF";
 import {EmfMetafileHeaderExtension2} from "./reсords/Control/EmfMetafileHeaderExtension2";
+import {SetBKMode} from "./reсords/State/SetBKMode";
 
 let records = {
 	[RecordType.EMR_HEADER]: EmfMetafileHeaderExtension2,
 	[RecordType.EMR_SETMAPMODE]: SetMapMode,
 	[RecordType.EMR_MODIFYWORLDTRANSFORM]: ModifyWorldTransform,
 	[RecordType.EMR_COMMENT]: Comment,
-	[RecordType.EMR_SETBKMODE]: SetMapMode,
+	[RecordType.EMR_SETBKMODE]: SetBKMode,
 	[RecordType.EMR_SETPOLYFILLMODE]: SetPolyfillMode,
 	[RecordType.EMR_SETTEXTALIGN]: SetTextAlign,
 	[RecordType.EMR_SETTEXTCOLOR]: SetTextColor,

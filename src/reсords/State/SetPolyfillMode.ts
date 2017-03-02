@@ -1,10 +1,12 @@
-export class SetPolyfillMode {
+import {Record} from "../Record";
+export class SetPolyfillMode extends Record {
 
 	constructor(){
+		super();
 		console.log("SetPolyfillMode");
 	}
 
-	private structure = {
+	protected structure = {
 		Type: 32,
 		Size: 32,
 		PolygonFillMode: 32

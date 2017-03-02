@@ -1,9 +1,11 @@
-export class CreateBrushInDirect {
+import {Record} from "../Record";
+export class CreateBrushInDirect extends Record {
 	constructor() {
+		super();
 		console.log("CreateBrushInDirect");
 	}
 
-	private structure = {
+	protected structure = {
 		Type: 32,
 		Size: 32,
 		ihBrush: 32,

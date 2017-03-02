@@ -1,8 +1,10 @@
-export class SetRop2 {
+import {Record} from "../Record";
+export class SetRop2 extends Record {
 	constructor() {
+		super();
 		console.log("SetRop2");
 	}
-	private structure = {
+	protected structure = {
 		Type: 32,
 		Size: 32,
 		ROP2Mode: 32,
