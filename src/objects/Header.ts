@@ -1,6 +1,14 @@
+import {RectL} from "../WMF/objects/RectL";
+import {SizeL} from "../WMF/objects/SizeL";
 export const Header = {
-	Bounds: 128,
-	Frame: 128,
+	Bounds: {
+		size: 128,
+		structure: RectL
+	},
+	Frame: {
+		size: 128,
+		structure: RectL
+	},
 	RecordSignature: 32,
 	Version: 32,
 	Bytes: 32,
@@ -10,6 +18,12 @@ export const Header = {
 	nDescription: 32,
 	offDescription: 32,
 	nPalEntries: 32,
-	Device: 64,
-	Millimeters: 64,
+	Device: {
+		size: 64,
+		structure: SizeL
+	},
+	Millimeters: {
+		size: 64,
+		structure: SizeL
+	},
 };

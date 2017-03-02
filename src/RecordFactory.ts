@@ -2,7 +2,6 @@ import {RecordType} from "./enums/record-type";
 import {SetMapMode} from "./reсords/State/SetMapMode";
 import {Comment} from "./reсords/Comment/Comment";
 import {SetPolyfillMode} from "./reсords/State/SetPolyfillMode";
-import {EmfMetafileHeader} from "./reсords/Control/EmfMetafileHeader";
 import {ModifyWorldTransform} from "./reсords/Transform/ModifyWorldTransform";
 import {SetTextAlign} from "./reсords/State/SetTextAlign";
 import {SetTextColor} from "./reсords/State/SetTextColor";
@@ -18,9 +17,10 @@ import {FillPath} from "./reсords/Drawing/FillPath";
 import {DeleteObject} from "./reсords/ObjectManipulation/DeleteObject";
 import {LineTo} from "./reсords/Drawing/LineTo";
 import {EOF} from "./reсords/Control/EOF";
+import {EmfMetafileHeaderExtension2} from "./reсords/Control/EmfMetafileHeaderExtension2";
 
 let records = {
-	[RecordType.EMR_HEADER]: EmfMetafileHeader,
+	[RecordType.EMR_HEADER]: EmfMetafileHeaderExtension2,
 	[RecordType.EMR_SETMAPMODE]: SetMapMode,
 	[RecordType.EMR_MODIFYWORLDTRANSFORM]: ModifyWorldTransform,
 	[RecordType.EMR_COMMENT]: Comment,

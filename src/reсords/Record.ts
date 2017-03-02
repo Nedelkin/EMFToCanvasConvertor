@@ -4,15 +4,37 @@ export interface IRecord  {
 
 export class Record implements IRecord {
 	public parse(data:DataView, offset:number):void {
-		for (let prop in this.structure) {
-			if (this.structure.hasOwnProperty(prop)) {
-				if (this.structure[prop] === 32) {
-					this.props[prop] = data.getUint32(offset, true);
-					offset += this.structure[prop] / 8;
+		this.props = this.passBinaryTree(data, this.structure, offset);
+		console.log(this.props)
+	}
+
+	private passBinaryTree(data:DataView, structure:any, offset:number):any {
+		let result:any = {};
+
+		for (let prop in structure) {
+
+			if (structure.hasOwnProperty(prop)) {
+
+				let value = structure[prop];
+
+				if (typeof value === "number") {
+
+					switch (value) {
+						case 32: result[prop] = data.getUint32(offset, true); break;
+						case 16: result[prop] = data.getUint16(offset, true); break;
+						default: console.log(`The case for ${value} doesn't exist`);
+					}
+
+					offset += value / 8;
+				}
+
+				if (typeof value === "object") {
+					result[prop] = this.passBinaryTree(data, value.structure, offset);
+					offset += value.size / 8;
 				}
 			}
 		}
-		console.log(this.props);
+		return result;
 	}
 
 	protected props:any = {};
